@@ -1,6 +1,6 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import { Button, CounterButton } from "@repo/ui";
+import { Button } from "@repo/ui";
 
 function App() {
 	return (
@@ -15,7 +15,6 @@ function App() {
 			</div>
 			<h1>Vite + React</h1>
 			<div className="card">
-				<CounterButton />
 				<Button>
 					Button from <code>ui</code> package
 				</Button>

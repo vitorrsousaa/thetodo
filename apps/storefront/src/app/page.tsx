@@ -1,5 +1,5 @@
 import { log } from "@repo/logger";
-import { CounterButton, Link } from "@repo/ui";
+import { Button, Link } from "@repo/ui";
 
 export const metadata = {
 	title: "Store | Kitchen Sink",
@@ -14,16 +14,13 @@ export default function Store(): JSX.Element {
 				Store <br />
 				<span>Kitchen Sink</span>
 			</h1>
-			<CounterButton />
+			<Button>
+				Button from <code>ui</code> package
+			</Button>
 			<p className="description">
-				Built With{" "}
-				<Link href="https://turbo.build/repo" newTab>
-					Turborepo
-				</Link>
+				Built With <a href="https://turbo.build/repo">Turborepo</a>
 				{" & "}
-				<Link href="https://nextjs.org/" newTab>
-					Next.js
-				</Link>
+				<a href="https://nextjs.org/">Next.js</a>
 			</p>
 		</div>
 	);

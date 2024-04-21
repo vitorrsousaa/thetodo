@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { CounterButton, Link } from "@repo/ui";
+import { Button } from "@repo/ui";
 
 function App(): JSX.Element {
 	return (
@@ -9,16 +9,13 @@ function App(): JSX.Element {
 				Admin <br />
 				<span>Kitchen Sink aaa</span>
 			</h1>
-			<CounterButton />
+			<Button>
+				Button from <code>ui</code> package
+			</Button>
 			<p className="description">
-				Built With{" "}
-				<Link href="https://turbo.build/repo" newTab>
-					Turborepo
-				</Link>
+				Built With <a href="https://turbo.build/repo">Turborepo</a>
 				{" & "}
-				<Link href="https://vitejs.dev/" newTab>
-					Vite
-				</Link>
+				<a href="https://vitejs.dev/">Vite</a>
 			</p>
 		</div>
 	);
