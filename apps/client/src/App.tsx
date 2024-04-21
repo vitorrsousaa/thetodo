@@ -1,6 +1,6 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import { CounterButton } from "@repo/ui";
+import { Button, CounterButton } from "@repo/ui";
 
 function App() {
 	return (
@@ -16,6 +16,9 @@ function App() {
 			<h1>Vite + React</h1>
 			<div className="card">
 				<CounterButton />
+				<Button>
+					Button from <code>ui</code> package
+				</Button>
 				<p>
 					Edit <code>src/App.tsx</code> and save to test HMR
 				</p>
