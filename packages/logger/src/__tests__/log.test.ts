@@ -1,6 +1,7 @@
 import { log } from "..";
+import { spyOn } from "@vitest/spy";
 
-jest.spyOn(global.console, "log");
+spyOn(global.console, "log");
 
 describe("@repo/logger", () => {
 	it("prints a message", () => {
