@@ -6,7 +6,7 @@
     "build": "next build",
     "clean": "rm -rf .next",
     "dev": "next dev -p 3002",
-    "lint": "next lint",
+    "lint": "biome lint --apply ./src",
     "typecheck": "tsc --noEmit",
     "start": "next start"
   },

@@ -15,7 +15,7 @@
     "clean": "rm -rf dist",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src/",
+    "lint": "biome lint --apply ./src",
     "test": "jest"
   },
   "jest": {

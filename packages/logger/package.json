@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src/",
+    "lint": "biome lint --apply ./src",
     "typecheck": "tsc --noEmit",
     "test": "jest"
   },
