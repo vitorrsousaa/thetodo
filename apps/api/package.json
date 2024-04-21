@@ -9,7 +9,8 @@
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit",
     "lint": "biome lint --apply ./src",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "format": "biome format --write ./src"
   },
   "jest": {
     "preset": "@repo/jest-presets/node"

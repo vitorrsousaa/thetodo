@@ -7,7 +7,8 @@
     "clean": "rm -rf dist",
     "dev": "vite --host 0.0.0.0 --port 3001 --clearScreen false",
     "typecheck": "tsc --noEmit",
-    "lint": "biome lint --apply ./src"
+    "lint": "biome lint --apply ./src",
+    "format": "biome format --write ./src"
   },
   "dependencies": {
     "react": "^18.2.0",

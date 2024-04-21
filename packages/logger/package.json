@@ -12,7 +12,8 @@
     "dev": "tsup --watch",
     "lint": "biome lint --apply ./src",
     "typecheck": "tsc --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "format": "biome format --write ./src"
   },
   "jest": {
     "preset": "@repo/jest-presets/node"

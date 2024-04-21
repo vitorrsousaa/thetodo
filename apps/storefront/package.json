@@ -8,7 +8,8 @@
     "dev": "next dev -p 3002",
     "lint": "biome lint --apply ./src",
     "typecheck": "tsc --noEmit",
-    "start": "next start"
+    "start": "next start",
+    "format": "biome format --write ./src"
   },
   "dependencies": {
     "@repo/logger": "*",
