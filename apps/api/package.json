@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome lint --apply ./src",
     "test": "jest --detectOpenHandles",
+    "check": "biome check --apply ./src",
     "format": "biome format --write ./src"
   },
   "jest": {

@@ -17,7 +17,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome lint --apply ./src",
     "test": "jest",
-    "format": "biome format --write ./src"
+    "format": "biome format --write ./src",
+    "check": "biome check --apply ./src"
   },
   "jest": {
     "preset": "@repo/jest-presets/browser"
