@@ -13,18 +13,20 @@
 		"test:watch": "vitest run --watch"
 	},
 	"dependencies": {
+		"@repo/config-css": "*",
+		"@repo/ui": "*",
 		"autoprefixer": "^10.4.19",
 		"axios": "^1.6.8",
 		"postcss": "^8.4.38",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-hot-toast": "^2.4.1",
 		"react-router-dom": "^6.22.3",
-		"tailwindcss": "^3.4.3",
-		"@repo/ui": "*",
-		"@repo/config-css": "*"
+		"tailwindcss": "^3.4.3"
 	},
 	"devDependencies": {
 		"@repo/vitest-presets": "*",
+		"@types/node": "^20.12.7",
 		"@types/react": "^18.2.66",
 		"@types/react-dom": "^18.2.22",
 		"@vitejs/plugin-react-swc": "^3.5.0",

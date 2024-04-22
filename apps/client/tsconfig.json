@@ -20,7 +20,20 @@
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+
+		/* Aliases */
+		"baseUrl": ".",
+		"paths": {
+			"@/pages/*": ["./src/view/pages/*"],
+			"@/components/*": ["./src/view/components/*"],
+			"@/utils/*": ["./src/app/utils/*"],
+			"@/services/*": ["./src/app/services/*"],
+			"@/hooks/*": ["./src/app/hooks/*"],
+			"@/contexts/*": ["./src/app/contexts/*"],
+			"@/config/*": ["./src/app/config/*"],
+			"@/libs/*": ["./src/app/libs/*"]
+		}
 	},
 	"include": ["src"]
 }
