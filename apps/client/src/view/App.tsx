@@ -1,26 +1,37 @@
 import viteLogo from "/vite.svg";
 import { Button } from "@repo/ui";
 
+const buttonVariants = [
+	"default",
+	"destructive",
+	"outline",
+	"secondary",
+	"ghost",
+	"link",
+] as const;
+
 function App() {
 	return (
 		<>
-			<div>
-				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
+			<div className="mt-8 items-center space-y-4">
+				<div className="flex w-full justify-center text-3xl font-bold gap-2">
+					<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+						<img src={viteLogo} className="logo" alt="Vite logo" />
+					</a>
+					Vite + React
+				</div>
+				<div className="flex w-full justify-center space-x-4">
+					<ul className="items-center space-y-1 md:inline-flex md:space-x-1 md:space-y-0">
+						{buttonVariants.map((variant) => (
+							<li key={variant}>
+								<Button variant={variant} className="capitalize">
+									{variant}
+								</Button>
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<Button className="bg-red-400">
-					Button from <code>ui</code> package
-				</Button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
 		</>
 	);
 }
