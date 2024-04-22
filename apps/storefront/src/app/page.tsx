@@ -1,5 +1,5 @@
 import { log } from "@repo/logger";
-import { Button, Link } from "@repo/ui";
+import { Button } from "@repo/ui";
 
 export const metadata = {
 	title: "Store | Kitchen Sink",
