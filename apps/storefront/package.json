@@ -1,29 +1,30 @@
 {
-  "name": "storefront",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "clean": "rm -rf .next",
-    "dev": "next dev -p 3002",
-    "lint": "biome lint --apply ./src",
-    "typecheck": "tsc --noEmit",
-    "start": "next start",
-    "check": "biome check --apply ./src",
-    "format": "biome format --write ./src"
-  },
-  "dependencies": {
-    "@repo/logger": "*",
-    "@repo/ui": "*",
-    "next": "^14.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@repo/typescript-config": "*",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.2.62",
-    "@types/react-dom": "^18.2.19",
-    "typescript": "^5.3.3"
-  }
+	"name": "storefront",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"clean": "rm -rf .next",
+		"dev": "next dev -p 3002",
+		"lint": "biome lint --apply ./src",
+		"typecheck": "tsc --noEmit",
+		"start": "next start",
+		"check": "biome check --apply ./src",
+		"format": "biome format --write ./src"
+	},
+	"dependencies": {
+		"@repo/logger": "*",
+		"@repo/ui": "*",
+		"@repo/config-css": "*",
+		"next": "^14.1.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@repo/typescript-config": "*",
+		"@types/node": "^20.11.24",
+		"@types/react": "^18.2.62",
+		"@types/react-dom": "^18.2.19",
+		"typescript": "^5.3.3"
+	}
 }
