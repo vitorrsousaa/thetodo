@@ -1,6 +1,6 @@
 {
 	"exclude": ["node_modules"],
-	"extends": "@repo/typescript-config/vite.json",
+	"extends": "@shared/typescript-config/vite.json",
 	"compilerOptions": {
 		"target": "ES2020",
 		"useDefineForClassFields": true,
