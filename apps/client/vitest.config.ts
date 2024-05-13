@@ -6,7 +6,9 @@ import { defineProject, mergeConfig } from "vitest/config";
 export default mergeConfig(
 	configShared,
 	defineProject({
-		test: {},
+		test: {
+			globals:true
+		},
 		resolve: {
 			alias: {
 				"@/pages": path.resolve(__dirname, "./src/view/pages"),
