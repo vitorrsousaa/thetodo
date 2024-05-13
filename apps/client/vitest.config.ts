@@ -1,6 +1,6 @@
 import path from "node:path";
 // @ts-ignore
-import configShared from "@repo/vitest-presets/browser/vitest.config";
+import configShared from "@shared/vitest-presets/browser/vitest.config";
 import { defineProject, mergeConfig } from "vitest/config";
 
 export default mergeConfig(

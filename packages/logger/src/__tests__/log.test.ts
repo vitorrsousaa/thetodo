@@ -3,7 +3,7 @@ import { spyOn } from "@vitest/spy";
 
 spyOn(global.console, "log");
 
-describe("@repo/logger", () => {
+describe("@shared/logger", () => {
 	it("prints a message", () => {
 		log("hello");
 		// eslint-disable-next-line no-console -- testing console

@@ -1,4 +1,4 @@
-import { Button } from "@repo/ui";
+import { Button } from "@shared/ui";
 import toast from "react-hot-toast";
 import viteLogo from "/vite.svg";
 

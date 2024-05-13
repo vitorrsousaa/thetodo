@@ -1,5 +1,5 @@
 {
-	"name": "@repo/config-css",
+	"name": "@shared/config-css",
 	"version": "0.0.0",
 	"main": "index.js",
 	"license": "MIT",

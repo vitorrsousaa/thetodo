@@ -1,5 +1,5 @@
 {
-	"name": "@repo/logger",
+	"name": "@shared/logger",
 	"version": "0.0.0",
 	"private": true,
 	"main": "./dist/index.js",
@@ -18,8 +18,8 @@
 		"check": "biome check --apply ./src"
 	},
 	"devDependencies": {
-		"@repo/typescript-config": "*",
-		"@repo/vitest-presets": "*",
+		"@shared/typescript-config": "*",
+		"@shared/vitest-presets": "*",
 		"@types/node": "^20.11.24",
 		"tsup": "^8.0.2",
 		"typescript": "^5.3.3"
