@@ -1,12 +1,15 @@
+import { ThemeProvider } from "@shared/ui";
 import { Toaster } from "react-hot-toast";
 import { Router } from "./router/browser";
 
 function App() {
 	return (
 		<>
-			<Router />
+			<ThemeProvider storageKey="thetodo-theme" defaultTheme="dark">
+				<Router />
 
-			<Toaster />
+				<Toaster />
+			</ThemeProvider>
 		</>
 	);
 }
