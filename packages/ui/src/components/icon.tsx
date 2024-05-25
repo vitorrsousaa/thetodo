@@ -1,25 +1,22 @@
 "use client";
 
 import {
+	ArchiveIcon,
 	BellIcon,
 	CalendarIcon,
-	CaretSortIcon,
+	CardStackIcon,
 	ClipboardIcon,
-	CrossCircledIcon,
-	DotsHorizontalIcon,
-	FileIcon,
 	GearIcon,
-	GroupIcon,
-	HamburgerMenuIcon,
 	HomeIcon,
-	InstagramLogoIcon,
+	IdCardIcon,
+	KeyboardIcon,
 	LayersIcon,
 	PersonIcon,
-	PlusCircledIcon,
+	RocketIcon,
 	TrashIcon,
 } from "@radix-ui/react-icons";
 
-interface IconProps {
+export interface IconProps {
 	name: keyof typeof icons;
 	className?: string;
 }
@@ -32,6 +29,12 @@ const icons = {
 	person: PersonIcon,
 	settings: GearIcon,
 	trash: TrashIcon,
+	layers: LayersIcon,
+	archive: ArchiveIcon,
+	cardStack: CardStackIcon,
+	rocket: RocketIcon,
+	idCard: IdCardIcon,
+	keyboard: KeyboardIcon,
 } as const;
 
 export function Icon(props: IconProps) {
