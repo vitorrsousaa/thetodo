@@ -3,10 +3,10 @@ import {
 	Button,
 	Card,
 	CardContent,
-	Checkbox,
-	Input,
-	Label,
-	Textarea,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+	Radio,
 } from "@shared/ui";
 
 export function Home() {
@@ -22,14 +22,14 @@ export function Home() {
 				<Card>
 					<CardContent className="grid gap-4">
 						<div className="flex items-center gap-2">
-							<Checkbox defaultChecked id="todo-1" />
+							<Radio defaultChecked id="todo-1" />
 							<h3 className="font-medium">Finish project proposal</h3>
 						</div>
-						<p className="text-sm text-gray-500 dark:text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							Complete the project proposal for the client meeting next week.
 						</p>
 						<div className="flex items-center justify-between">
-							<span className="text-sm text-gray-500 dark:text-gray-400">
+							<span className="text-sm text-muted-foreground">
 								Due: May 30, 2023
 							</span>
 							<Badge className="rounded-full px-2 py-1" variant="outline">
@@ -39,36 +39,38 @@ export function Home() {
 					</CardContent>
 				</Card>
 				<Card>
+					<CardHeader>
+						<CardTitle className="flex items-center gap-2">
+							<Radio id="todo-2" />
+							<h3 className="font-medium">Example task</h3>
+						</CardTitle>
+					</CardHeader>
 					<CardContent className="grid gap-4">
-						<div className="flex items-center gap-2">
-							<Checkbox id="todo-2" />
-							<h3 className="font-medium">Prepare for team meeting</h3>
-						</div>
-						<p className="text-sm text-gray-500 dark:text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							Gather agenda items and review previous meeting notes.
 						</p>
-						<div className="flex items-center justify-between">
-							<span className="text-sm text-gray-500 dark:text-gray-400">
-								Due: June 5, 2023
-							</span>
-							<Badge className="rounded-full px-2 py-1" variant="outline">
-								To Do
-							</Badge>
-						</div>
 					</CardContent>
+					<CardFooter className="flex items-center justify-between">
+						<span className="text-sm text-muted-foreground">
+							Due: June 5, 2023
+						</span>
+						<Badge className="rounded-full px-2 py-1" variant="outline">
+							To Do
+						</Badge>
+					</CardFooter>
 				</Card>
 				<Card>
 					<CardContent className="grid gap-4">
 						<div className="flex items-center gap-2">
-							<Checkbox defaultChecked id="todo-3" />
+							<Radio defaultChecked id="todo-3" />
 							<h3 className="font-medium">Review marketing campaign</h3>
 						</div>
-						<p className="text-sm text-gray-500 dark:text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							Analyze the performance of the latest marketing campaign and
 							identify areas for improvement.
 						</p>
 						<div className="flex items-center justify-between">
-							<span className="text-sm text-gray-500 dark:text-gray-400">
+							<span className="text-sm text-muted-foreground">
 								Due: June 15, 2023
 							</span>
 							<Badge className="rounded-full px-2 py-1" variant="outline">
@@ -80,14 +82,14 @@ export function Home() {
 				<Card>
 					<CardContent className="grid gap-4">
 						<div className="flex items-center gap-2">
-							<Checkbox id="todo-4" />
+							<Radio id="todo-4" />
 							<h3 className="font-medium">Organize team offsite</h3>
 						</div>
-						<p className="text-sm text-gray-500 dark:text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							Plan the logistics and agenda for the upcoming team offsite.
 						</p>
 						<div className="flex items-center justify-between">
-							<span className="text-sm text-gray-500 dark:text-gray-400">
+							<span className="text-sm text-muted-foreground">
 								Due: July 1, 2023
 							</span>
 							<Badge className="rounded-full px-2 py-1" variant="outline">
@@ -99,15 +101,15 @@ export function Home() {
 				<Card>
 					<CardContent className="grid gap-4">
 						<div className="flex items-center gap-2">
-							<Checkbox id="todo-5" />
+							<Radio id="todo-5" />
 							<h3 className="font-medium">Finalize quarterly report</h3>
 						</div>
-						<p className="text-sm text-gray-500 dark:text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							Gather data and prepare the quarterly report for the leadership
 							team.
 						</p>
 						<div className="flex items-center justify-between">
-							<span className="text-sm text-gray-500 dark:text-gray-400">
+							<span className="text-sm text-muted-foreground">
 								Due: June 30, 2023
 							</span>
 							<Badge className="rounded-full px-2 py-1" variant="outline">
@@ -116,30 +118,6 @@ export function Home() {
 						</div>
 					</CardContent>
 				</Card>
-			</div>
-			<div className="border shadow-sm rounded-lg p-4">
-				<h3 className="font-semibold text-lg mb-4">Add New Todo</h3>
-				<form className="grid gap-4">
-					<div className="grid gap-2">
-						<Label htmlFor="title">Title</Label>
-						<Input id="title" placeholder="Enter todo title" type="text" />
-					</div>
-					<div className="grid gap-2">
-						<Label htmlFor="description">Description</Label>
-						<Textarea
-							id="description"
-							placeholder="Enter todo description"
-							rows={3}
-						/>
-					</div>
-					<div className="grid gap-2">
-						<Label htmlFor="due-date">Due Date</Label>
-						<Input id="due-date" type="date" />
-					</div>
-					<Button className="w-full" type="submit">
-						Add Todo
-					</Button>
-				</form>
 			</div>
 		</main>
 	);
