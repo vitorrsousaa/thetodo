@@ -10,3 +10,4 @@ export * from "./button";
 export * from "./theme-provider";
 export * from "./toggle-theme";
 export * from "./icon";
+export * from "./radio";
