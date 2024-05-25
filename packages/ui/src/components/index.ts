@@ -7,3 +7,5 @@ export * from "./badge";
 export * from "./label";
 export * from "./text-area";
 export * from "./button";
+export * from "./theme-provider";
+export * from "./toggle-theme";
