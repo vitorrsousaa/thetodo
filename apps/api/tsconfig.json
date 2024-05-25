@@ -1,5 +1,5 @@
 {
-	"extends": "@shared/typescript-config/base.json",
+	"extends": ["@shared/typescript-config/base.json", "./tsconfig.paths.json"],
 	"compilerOptions": {
 		"lib": ["ES2015"],
 		"outDir": "./dist",
