@@ -1,5 +1,10 @@
 # React + TypeScript + Vite
 
+# Inspirations
+- https://dribbble.com/shots/23041147-Property-Management-Web-App-animation
+- https://dribbble.com/shots/19026425-dashboard-calendar
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
