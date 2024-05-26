@@ -1,137 +1,5 @@
 const originalTasks = [
 	{
-		id: "a635b137-10af-45ad-9a5e-c0614cee0355",
-		title: "acitretin",
-		description:
-			"Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-		end_date: "2024-05-20T06:47:32Z",
-		priority: "P1",
-		tags: "quam nec dui luctus rutrum",
-		category: "category1",
-		checked: false,
-	},
-	{
-		id: "47a6104c-0f73-4d56-a240-506236eaa1d0",
-		title: "Alcohol",
-		description:
-			"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-		end_date: "2024-04-16T04:00:08Z",
-		priority: "P4",
-		tags: "vestibulum ac est lacinia nisi",
-		category: "category4",
-		checked: true,
-	},
-	{
-		id: "6d587fef-81c6-4a49-9ead-709bf119eb1d",
-		title: "Tamsulosin Hydrochloride",
-		description:
-			"Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-		end_date: "2024-06-14T18:45:50Z",
-		priority: "P4",
-		tags: "donec ut dolor morbi",
-		category: "category4",
-		checked: false,
-	},
-	{
-		id: "3d7a4fc0-65ae-4714-90ba-91490ab93aa6",
-		title: "Pramipexole Dihydrochloride",
-		description:
-			"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
-		end_date: "2024-07-01T11:17:11Z",
-		priority: "P2",
-		tags: "purus",
-		category: "category2",
-		checked: false,
-	},
-	{
-		id: "c109c491-03d1-447b-b317-9c1f81150182",
-		title: "Standardized Mite, Dermatophagoides pteronyssinus",
-		description:
-			"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-		end_date: "2024-07-26T14:40:42Z",
-		priority: "P4",
-		tags: "est quam",
-		category: "category4",
-		checked: false,
-	},
-	{
-		id: "4faf6f66-d557-4597-b1d7-f0a1cb106ab6",
-		title: "benzalkonium chloride",
-		description:
-			"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-		end_date: "2024-08-01T14:13:16Z",
-		priority: "P2",
-		tags: "dolor morbi vel lectus",
-		category: "category3",
-		checked: false,
-	},
-	{
-		id: "a0ba7707-824b-4796-971c-10640de7cfc7",
-		title: "pregabalin",
-		description:
-			"Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-		end_date: "2024-09-01T01:20:25Z",
-		priority: "P2",
-		tags: "eros suspendisse accumsan tortor",
-		category: "category4",
-		checked: false,
-	},
-	{
-		id: "26dc2cf1-e2a1-4615-b6cd-8790464206ec",
-		title: "OCTINOXATE and TITANIUM DIOXIDE",
-		description:
-			"Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-		end_date: "2024-08-10T05:06:55Z",
-		priority: "P3",
-		tags: "nec sem duis",
-		category: "category3",
-		checked: false,
-	},
-	{
-		id: "0f16eb2f-6409-4cf6-837f-47878a19db16",
-		title: "OATMEAL",
-		description:
-			"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-		end_date: "2024-05-29T09:31:54Z",
-		priority: "P2",
-		tags: "ridiculus mus vivamus",
-		category: "category3",
-		checked: true,
-	},
-	{
-		id: "37d2f066-b57d-4ebb-824e-463c89aac897",
-		title: "ANTIPYRINE, BENZOCAINE",
-		description:
-			"Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-		end_date: "2024-08-11T23:07:01Z",
-		priority: "P4",
-		tags: "posuere felis sed lacus",
-		category: "category3",
-		checked: false,
-	},
-	{
-		id: "61017ffa-2062-4ec7-97b6-e086da9f6cc7",
-		title: "BUTALBITAL, ASPIRIN, AND CAFFEINE",
-		description:
-			"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-		end_date: "2024-08-24T06:51:55Z",
-		priority: "P4",
-		tags: "leo",
-		category: "category2",
-		checked: false,
-	},
-	{
-		id: "cecb9318-e5c9-486f-877c-5fdbc151d5a5",
-		title: "Avobenzone, Octisalate and Octocrylene",
-		description:
-			"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-		end_date: "2024-07-02T02:08:30Z",
-		priority: "P3",
-		tags: "non mattis",
-		category: "category2",
-		checked: true,
-	},
-	{
 		id: "34c53c3f-1b13-4f8e-9c0a-e6f293009d73",
 		title: "Ethyl Alcohol",
 		description:
@@ -208,39 +76,7 @@ const originalTasks = [
 		category: "category3",
 		checked: false,
 	},
-	{
-		id: "70302cff-6be8-47a3-ae1c-b1037bcff8dd",
-		title: "conjugated estrogens",
-		description:
-			"Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-		end_date: "2024-09-10T16:59:46Z",
-		priority: "P2",
-		tags: "leo odio porttitor id consequat",
-		category: "category2",
-		checked: true,
-	},
-	{
-		id: "a829291f-ebd3-4dd4-a7eb-04d4669d1d3b",
-		title: "Amlodipine Besylate and Benazepril HCL",
-		description:
-			"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-		end_date: "2024-04-26T14:32:33Z",
-		priority: "P1",
-		tags: "ipsum primis in faucibus",
-		category: "category2",
-		checked: false,
-	},
-	{
-		id: "d454ee12-3df3-463e-88e0-0698759f42f8",
-		title: "50 Remedy Kit",
-		description:
-			"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
-		end_date: "2024-09-03T10:46:02Z",
-		priority: "P3",
-		tags: "justo maecenas rhoncus aliquam",
-		category: "category2",
-		checked: true,
-	},
+
 	{
 		id: "ce8ed15e-b15b-4e84-86f8-62f22a982986",
 		title: "Glyburide",
@@ -252,17 +88,7 @@ const originalTasks = [
 		category: "category1",
 		checked: true,
 	},
-	{
-		id: "a0334ebe-f5ba-4085-8c81-8e4b86579cdc",
-		title: "Firebush/Burning Bush",
-		description:
-			"Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-		end_date: "2024-05-08T23:36:31Z",
-		priority: "P2",
-		tags: "auctor gravida sem",
-		category: "category2",
-		checked: false,
-	},
+
 	{
 		id: "01640329-1731-490e-8834-8884a68ed208",
 		title: "Risperidone",
