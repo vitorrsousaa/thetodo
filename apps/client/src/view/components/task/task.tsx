@@ -5,6 +5,7 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
+	Icon,
 	Radio,
 	cn,
 } from "@shared/ui";
@@ -29,14 +30,16 @@ function useTask() {
 	return taskContext;
 }
 
-interface TaskProps {
+interface RootProps {
 	index: number;
 	checked: boolean;
 	children: ReactNode;
+	className?: string;
 }
 
-export function Root(props: TaskProps) {
-	const { index, checked, children } = props;
+export function Root(props: RootProps) {
+	const { index, checked, children, className } = props;
+
 	return (
 		<TaskContext.Provider value={{ checked, index }}>
 			<Card
@@ -45,6 +48,7 @@ export function Root(props: TaskProps) {
 				className={cn(
 					"cursor-pointer shadow-sm transition-transform duration-300 ease-in-out transform  w-72 mt-2 bg-secondary/20",
 					checked && "opacity-50 cursor-not-allowed",
+					className,
 				)}
 			>
 				{children}
@@ -65,14 +69,14 @@ export function Header(props: TaskHeaderProps) {
 		<CardHeader className="p-3">
 			<CardTitle className="flex items-center gap-2">
 				<Radio id={`task-${index}`} defaultChecked={checked} />
-				<h3
+				<p
 					className={cn(
 						"font-medium text-justify overflow-hidden text-ellipsis line-clamp-2",
 						checked && "line-through",
 					)}
 				>
 					{children}
-				</h3>
+				</p>
 			</CardTitle>
 		</CardHeader>
 	);
@@ -112,10 +116,11 @@ export function Footer(props: TaskFooterProps) {
 		<CardFooter className="flex items-center justify-between p-3">
 			<span
 				className={cn(
-					"text-[12px] text-muted-foreground",
+					"text-[12px] flex items-center gap-1 text-muted-foreground",
 					checked && "line-through",
 				)}
 			>
+				<Icon name="calendar" />
 				{new Intl.DateTimeFormat("en-US", {
 					dateStyle: "medium",
 				}).format(new Date(endDate))}
