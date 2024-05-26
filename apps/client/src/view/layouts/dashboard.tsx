@@ -146,7 +146,7 @@ export function DashboardLayout() {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col max-h-screen">
+			<div className="flex flex-col max-h-screen overflow-y-hidden">
 				<header className="flex h-14 lg:h-[60px] items-center justify-end gap-4 border-b bg-primary-foreground px-6">
 					<ToggleTheme />
 				</header>
