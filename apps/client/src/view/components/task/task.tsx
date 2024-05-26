@@ -104,26 +104,34 @@ export function Description(props: TaskDescriptionProps) {
 	);
 }
 
-interface TaskFooterProps {
+export interface TaskFooterProps {
 	endDate: string;
+	className?: string;
 }
 
 export function Footer(props: TaskFooterProps) {
-	const { endDate } = props;
+	const { endDate, className } = props;
 	const { checked } = useTask();
+	const isToday =
+		new Date(endDate).toDateString() === new Date().toDateString();
+	const isPast = new Date(endDate) < new Date();
+	const formatedDate = new Intl.DateTimeFormat("en-US", {
+		dateStyle: "medium",
+	}).format(new Date(endDate));
 
 	return (
-		<CardFooter className="flex items-center justify-between p-3">
+		<CardFooter
+			className={cn("flex items-center justify-between p-3", className)}
+		>
 			<span
 				className={cn(
 					"text-[12px] flex items-center gap-1 text-muted-foreground",
 					checked && "line-through",
+					isToday ? "text-green-600" : isPast && "text-red-500",
 				)}
 			>
 				<Icon name="calendar" />
-				{new Intl.DateTimeFormat("en-US", {
-					dateStyle: "medium",
-				}).format(new Date(endDate))}
+				{isToday ? "Today" : formatedDate}
 			</span>
 			<Badge className="rounded-full px-2 py-1" variant="outline">
 				To Do

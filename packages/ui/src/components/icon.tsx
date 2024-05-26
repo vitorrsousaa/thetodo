@@ -6,11 +6,13 @@ import {
 	CalendarIcon,
 	CardStackIcon,
 	ClipboardIcon,
+	DragHandleDots2Icon,
 	GearIcon,
 	HomeIcon,
 	IdCardIcon,
 	KeyboardIcon,
 	LayersIcon,
+	MixerHorizontalIcon,
 	PersonIcon,
 	PlusIcon,
 	RocketIcon,
@@ -37,6 +39,8 @@ const icons = {
 	idCard: IdCardIcon,
 	keyboard: KeyboardIcon,
 	plus: PlusIcon,
+	drag_handle: DragHandleDots2Icon,
+	mixer: MixerHorizontalIcon,
 } as const;
 
 export function Icon(props: IconProps) {

@@ -13,6 +13,15 @@ export function Inbox() {
 						<InlineTask.Header>Task 1</InlineTask.Header>
 						<InlineTask.Description>Task 1 description</InlineTask.Description>
 					</InlineTask.Root>
+					<InlineTask.Root index={1} checked={false}>
+						<InlineTask.Header>Task 2</InlineTask.Header>
+						<InlineTask.Description>Task 2 description</InlineTask.Description>
+					</InlineTask.Root>
+					<InlineTask.Root index={2} checked={false}>
+						<InlineTask.Header>Task 3</InlineTask.Header>
+						<InlineTask.Description>Task 3 description</InlineTask.Description>
+						<InlineTask.Footer endDate="2022-12-31" />
+					</InlineTask.Root>
 
 					<Button className="w-full mt-4">
 						<Icon name="plus" className="mr-2" />
