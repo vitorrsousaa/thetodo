@@ -30,7 +30,7 @@ function useTask() {
 	return taskContext;
 }
 
-interface RootProps {
+export interface RootProps {
 	index: number;
 	checked: boolean;
 	children: ReactNode;
@@ -57,7 +57,7 @@ export function Root(props: RootProps) {
 	);
 }
 
-interface TaskHeaderProps {
+export interface TaskHeaderProps {
 	children: string;
 }
 
@@ -82,7 +82,7 @@ export function Header(props: TaskHeaderProps) {
 	);
 }
 
-interface TaskDescriptionProps {
+export interface TaskDescriptionProps {
 	children: string;
 }
 

@@ -1,4 +1,4 @@
-import { Task } from "@/components/task";
+import { InlineTask } from "@/components/inline-task";
 import { Button, Icon } from "@shared/ui";
 
 export function Inbox() {
@@ -9,22 +9,11 @@ export function Inbox() {
 					<h2 className="font-semibold text-lg md:text-2xl">Inbox</h2>
 				</div>
 				<div className="w-full">
-					<Task.Root
-						index={0}
-						checked={false}
-						className="w-full border-none pb-3"
-					>
-						<Task.Header>Task 1</Task.Header>
-						<Task.Description>Task 1 description</Task.Description>
-					</Task.Root>
-					<Task.Root
-						index={1}
-						checked={false}
-						className="w-full border-none pb-3"
-					>
-						<Task.Header>Task 2</Task.Header>
-						<Task.Description>Task 2 description</Task.Description>
-					</Task.Root>
+					<InlineTask.Root index={0} checked={false}>
+						<InlineTask.Header>Task 1</InlineTask.Header>
+						<InlineTask.Description>Task 1 description</InlineTask.Description>
+					</InlineTask.Root>
+
 					<Button className="w-full mt-4">
 						<Icon name="plus" className="mr-2" />
 						Add Task
