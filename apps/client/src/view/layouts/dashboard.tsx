@@ -153,6 +153,9 @@ export function DashboardLayout() {
 			</div>
 			<div className="flex flex-col max-h-screen overflow-y-hidden">
 				<header className="flex h-14 lg:h-[60px] items-center justify-end gap-4 border-b bg-primary-foreground px-6">
+					<Button variant={"ghost"} className="h-8 w-8" size="icon">
+						<Icon name="mixer" className="h-4 w-4" />
+					</Button>
 					<ToggleTheme />
 				</header>
 				<Outlet />
