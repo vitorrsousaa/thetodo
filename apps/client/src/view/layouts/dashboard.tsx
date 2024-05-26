@@ -1,3 +1,4 @@
+import { ROUTES } from "@/config/routes";
 import {
 	Button,
 	DropdownMenu,
@@ -16,20 +17,23 @@ import {
 	ToggleTheme,
 	cn,
 } from "@shared/ui";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
-const sideItems: { name: string; icon: IconProps["name"] }[] = [
+const sideItems: { name: string; icon: IconProps["name"]; href: string }[] = [
 	{
 		name: "Inbox",
 		icon: "archive",
+		href: ROUTES.INBOX,
 	},
 	{
 		name: "Today",
 		icon: "calendar",
+		href: ROUTES.HOME,
 	},
 	{
 		name: "Upcoming",
 		icon: "cardStack",
+		href: "/",
 	},
 ];
 
@@ -108,6 +112,7 @@ function Dropdown() {
 }
 
 export function DashboardLayout() {
+	const { pathname } = useLocation();
 	return (
 		<div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
 			<div className="hidden border-r bg-primary-foreground lg:block ">
@@ -121,12 +126,12 @@ export function DashboardLayout() {
 					</div>
 					<div className="flex-1 overflow-auto py-2">
 						<nav className="grid items-start px-4 text-sm font-medium">
-							<Button variant={"default"} className="justify-start gap-2">
+							<Button variant={"default"} className="justify-start gap-2 mb-4">
 								<Icon name="plus" className="h-6 w-6" />
 								Add a task
 							</Button>
-							{sideItems.map((item, index) => {
-								const actived = index === 1;
+							{sideItems.map((item) => {
+								const actived = item.href === pathname;
 
 								return (
 									<a
@@ -135,7 +140,7 @@ export function DashboardLayout() {
 											"flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-accent-foreground",
 											actived && "bg-muted text-accent-foreground",
 										)}
-										href="/"
+										href={item.href}
 									>
 										<Icon name={item.icon} className="h-4 w-4" />
 										{item.name}
