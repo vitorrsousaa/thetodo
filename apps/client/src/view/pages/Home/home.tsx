@@ -7,7 +7,6 @@ import {
 	CardTitle,
 	Radio,
 	ScrollArea,
-	ScrollBar,
 	cn,
 } from "@shared/ui";
 import { tasks } from "./database";
@@ -25,24 +24,24 @@ export function Home() {
 	);
 
 	return (
-		<main className="flex-1 flex flex-col gap-4 p-4 md:gap-8 md:p-6 bg-blue-400">
-			<div className="flex items-center bg-red-400">
+		<main className="flex-1 flex flex-col gap-4 p-4 md:gap-8 md:p-6 max-h-screen overflow-y-hidden">
+			<div className="flex items-center ">
 				<h2 className="font-semibold text-lg md:text-2xl">Today</h2>
 			</div>
-			<ScrollArea className="w-full overflow-x-auto overflow-y-auto max-h-[700px] bg-green-400">
-				{/* <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row lg:overflow-x-scroll lg:w-full"> */}
-				<div className="flex gap-4 w-max">
-					{Object.values(tasksByCategory).map((tasks) => (
-						<div key={Math.random()} className="flex flex-col gap-3">
-							<h1 className="mb-2">{tasks[0].category}</h1>
+			<div className="flex gap-4 overflow-y-hidden ">
+				{Object.values(tasksByCategory).map((tasks) => (
+					<div key={Math.random()} className="flex flex-col">
+						<h1 className="mb-2">{tasks[0].category}</h1>
+						<ScrollArea>
 							{tasks.map((task, index) => (
 								<Card
 									key={task.id}
 									className={cn(
-										"cursor-pointer shadow-sm transition-transform duration-300 ease-in-out transform hover:scale-[1.02] w-72",
+										"cursor-pointer shadow-sm transition-transform duration-300 ease-in-out transform hover:scale-[1.02] w-72 mt-2",
 										task.checked &&
 											"opacity-50 cursor-not-allowed hover:scale-100",
 									)}
+									data-item-index={index}
 									aria-disabled={task.checked}
 								>
 									<CardHeader className="p-3">
@@ -88,13 +87,10 @@ export function Home() {
 									</CardFooter>
 								</Card>
 							))}
-						</div>
-					))}
-				</div>
-				<ScrollBar orientation="horizontal" />
-				<ScrollBar orientation="vertical" />
-			</ScrollArea>
-			{/* </div> */}
+						</ScrollArea>
+					</div>
+				))}
+			</div>
 		</main>
 	);
 }
