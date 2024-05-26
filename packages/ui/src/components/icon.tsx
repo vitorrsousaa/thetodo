@@ -12,6 +12,7 @@ import {
 	KeyboardIcon,
 	LayersIcon,
 	PersonIcon,
+	PlusIcon,
 	RocketIcon,
 	TrashIcon,
 } from "@radix-ui/react-icons";
@@ -35,6 +36,7 @@ const icons = {
 	rocket: RocketIcon,
 	idCard: IdCardIcon,
 	keyboard: KeyboardIcon,
+	plus: PlusIcon,
 } as const;
 
 export function Icon(props: IconProps) {

@@ -11,3 +11,4 @@ export * from "./theme-provider";
 export * from "./toggle-theme";
 export * from "./icon";
 export * from "./radio";
+export * from "./scroll-area";
