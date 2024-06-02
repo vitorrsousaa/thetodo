@@ -16,7 +16,7 @@ export function Home() {
 
 	return (
 		<ScrollArea className="overflow-y-hidden overflow-x-auto pb-3">
-			<main className="flex-1 flex flex-col gap-4 p-4 md:gap-8 md:p-6 max-h-screen overflow-y-hidden overflow-x-hidden">
+			<main className="flex-1 flex flex-col gap-4 p-4 px-8 md:gap-8 md:p-6 md:px-8 max-h-screen overflow-y-hidden overflow-x-hidden">
 				<ScrollBar orientation="horizontal" />
 				<div className="flex items-center ">
 					<h2 className="font-semibold text-lg md:text-2xl">Today</h2>

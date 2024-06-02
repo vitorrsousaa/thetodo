@@ -33,7 +33,7 @@ const sideItems: { name: string; icon: IconProps["name"]; href: string }[] = [
 	{
 		name: "Upcoming",
 		icon: "cardStack",
-		href: "/",
+		href: ROUTES.UPCOMING,
 	},
 ];
 

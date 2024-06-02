@@ -4,7 +4,7 @@ const originalTasks = [
 		title: "Ethyl Alcohol",
 		description:
 			"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-		end_date: "2024-06-19T07:40:21Z",
+		end_date: "2024-05-26T11:40:21Z",
 		priority: "P1",
 		tags: "quam suspendisse potenti",
 		category: "category1",
@@ -15,7 +15,7 @@ const originalTasks = [
 		title: "Fluconazole",
 		description:
 			"Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-		end_date: "2024-04-06T11:56:41Z",
+		end_date: "2024-05-27T11:56:41Z",
 		priority: "P4",
 		tags: "in faucibus orci",
 		category: "category1",
